@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="gTV-IL-0wX" customClass="HeadLinesNewCollectionViewCell" customModule="StoryboardPracticeForOneMoreTime" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="323" height="174"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="323" height="174"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ake-QN-llP">
+                        <rect key="frame" x="0.0" y="0.0" width="323" height="174"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="landscape" translatesAutoresizingMaskIntoConstraints="NO" id="ZJe-w8-Dq1">
+                                <rect key="frame" x="0.0" y="0.0" width="323" height="174"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZJe-w8-Dq1" firstAttribute="leading" secondItem="Ake-QN-llP" secondAttribute="leading" id="7bD-Uy-VIG"/>
+                            <constraint firstAttribute="bottom" secondItem="ZJe-w8-Dq1" secondAttribute="bottom" id="cxH-gb-4o4"/>
+                            <constraint firstAttribute="trailing" secondItem="ZJe-w8-Dq1" secondAttribute="trailing" id="fcc-PJ-qmn"/>
+                            <constraint firstItem="ZJe-w8-Dq1" firstAttribute="top" secondItem="Ake-QN-llP" secondAttribute="top" id="nTu-8b-5Cr"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="Ake-QN-llP" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="MLv-ZS-8Fa"/>
+                <constraint firstAttribute="bottom" secondItem="Ake-QN-llP" secondAttribute="bottom" id="NEn-8w-SSW"/>
+                <constraint firstAttribute="trailing" secondItem="Ake-QN-llP" secondAttribute="trailing" id="YXw-l3-gh1"/>
+                <constraint firstItem="Ake-QN-llP" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="e19-n0-Nzu"/>
+            </constraints>
+            <size key="customSize" width="323" height="174"/>
+            <connections>
+                <outlet property="newsImageView" destination="ZJe-w8-Dq1" id="x49-hu-xYo"/>
+                <outlet property="theWholeBackgroundView" destination="Ake-QN-llP" id="SWn-i1-Oh6"/>
+            </connections>
+            <point key="canvasLocation" x="231.53846153846152" y="64.691943127962077"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="landscape" width="128" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

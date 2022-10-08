@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="RecentNewsCollectionViewCell" customModule="StoryboardPracticeForOneMoreTime" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="351" height="177"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="351" height="177"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gYm-mg-QNa">
+                        <rect key="frame" x="15" y="0.0" width="321" height="177"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="airplane" translatesAutoresizingMaskIntoConstraints="NO" id="D8F-HW-wXO">
+                                <rect key="frame" x="0.0" y="0.0" width="112.33333333333333" height="177"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="bi7-wt-VOV">
+                                <rect key="frame" x="127.33333333333336" y="45" width="178.66666666666663" height="87"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Travel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYJ-Qv-fl1">
+                                        <rect key="frame" x="0.0" y="0.0" width="178.66666666666666" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemRedColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n7D-tT-KcU">
+                                        <rect key="frame" x="0.0" y="23.666666666666668" width="178.66666666666666" height="40.666666666666657"/>
+                                        <string key="text">Will corona virus make
+flying more expensive</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="BTW-zv-yeS">
+                                        <rect key="frame" x="0.0" y="69" width="178.66666666666666" height="18"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="💫25 min" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEK-Aa-OQZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="67.666666666666671" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👀 1.2k" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYT-lW-QGT">
+                                                <rect key="frame" x="70" y="0.0" width="52" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🪐 16" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zI3-Ev-QIY">
+                                                <rect key="frame" x="137.33333333333334" y="0.0" width="41.333333333333343" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="D8F-HW-wXO" secondAttribute="bottom" id="06h-Tq-Aln"/>
+                            <constraint firstItem="D8F-HW-wXO" firstAttribute="leading" secondItem="gYm-mg-QNa" secondAttribute="leading" id="0Yi-sI-QSN"/>
+                            <constraint firstItem="bi7-wt-VOV" firstAttribute="top" secondItem="gYm-mg-QNa" secondAttribute="top" constant="45" id="3DA-Ek-0bj"/>
+                            <constraint firstItem="D8F-HW-wXO" firstAttribute="width" secondItem="gYm-mg-QNa" secondAttribute="width" multiplier="0.35" id="ATq-T5-WsK"/>
+                            <constraint firstItem="D8F-HW-wXO" firstAttribute="top" secondItem="gYm-mg-QNa" secondAttribute="top" id="Erp-9p-avG"/>
+                            <constraint firstAttribute="trailing" secondItem="bi7-wt-VOV" secondAttribute="trailing" constant="15" id="HMU-xP-x6Q"/>
+                            <constraint firstItem="bi7-wt-VOV" firstAttribute="leading" secondItem="D8F-HW-wXO" secondAttribute="trailing" constant="15" id="eMR-Xn-SpY"/>
+                            <constraint firstAttribute="bottom" secondItem="bi7-wt-VOV" secondAttribute="bottom" constant="45" id="lLA-4y-P7D"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="gYm-mg-QNa" secondAttribute="bottom" id="VDN-Vt-PcR"/>
+                <constraint firstItem="gYm-mg-QNa" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="WeI-Ay-Nqt"/>
+                <constraint firstAttribute="trailing" secondItem="gYm-mg-QNa" secondAttribute="trailing" constant="15" id="Wvb-hD-fA6"/>
+                <constraint firstItem="gYm-mg-QNa" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="wui-EM-aAL"/>
+            </constraints>
+            <size key="customSize" width="351" height="177"/>
+            <connections>
+                <outlet property="theWholeBackgroundView" destination="gYm-mg-QNa" id="rTi-zZ-fSY"/>
+            </connections>
+            <point key="canvasLocation" x="145" y="24"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="airplane" width="128" height="128"/>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

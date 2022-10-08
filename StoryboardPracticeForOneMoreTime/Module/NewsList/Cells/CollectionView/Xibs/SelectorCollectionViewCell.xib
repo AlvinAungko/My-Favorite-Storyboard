@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SelectorCollectionViewCell" customModule="StoryboardPracticeForOneMoreTime" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="145" height="39"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="145" height="39"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZkA-GI-jmi">
+                        <rect key="frame" x="0.0" y="0.0" width="145" height="39"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All News" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJR-vU-Nle">
+                                <rect key="frame" x="39.666666666666664" y="9" width="65.666666666666686" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a0E-SE-aCj">
+                                <rect key="frame" x="0.0" y="32.666666666666664" width="145" height="6.3333333333333357"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="6.5" id="oLG-8Z-6cJ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WJR-vU-Nle" firstAttribute="centerY" secondItem="ZkA-GI-jmi" secondAttribute="centerY" id="2bn-Wf-2CQ"/>
+                            <constraint firstItem="WJR-vU-Nle" firstAttribute="centerX" secondItem="ZkA-GI-jmi" secondAttribute="centerX" id="BS4-cn-MV5"/>
+                            <constraint firstAttribute="trailing" secondItem="a0E-SE-aCj" secondAttribute="trailing" id="O7h-LN-VN6"/>
+                            <constraint firstItem="a0E-SE-aCj" firstAttribute="leading" secondItem="ZkA-GI-jmi" secondAttribute="leading" id="VLh-V5-G6F"/>
+                            <constraint firstAttribute="bottom" secondItem="a0E-SE-aCj" secondAttribute="bottom" id="tjb-5b-fGq"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="ZkA-GI-jmi" secondAttribute="trailing" id="Haj-TK-9zH"/>
+                <constraint firstItem="ZkA-GI-jmi" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="dQO-HY-Lfp"/>
+                <constraint firstAttribute="bottom" secondItem="ZkA-GI-jmi" secondAttribute="bottom" id="haw-dz-REs"/>
+                <constraint firstItem="ZkA-GI-jmi" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="hnl-R6-Rfh"/>
+            </constraints>
+            <size key="customSize" width="145" height="39"/>
+            <connections>
+                <outlet property="newsLabel" destination="WJR-vU-Nle" id="4E2-hd-Ti6"/>
+                <outlet property="selectorView" destination="a0E-SE-aCj" id="sb4-wi-xZT"/>
+                <outlet property="theWholeView" destination="ZkA-GI-jmi" id="ID2-9D-jjt"/>
+            </connections>
+            <point key="canvasLocation" x="94.615384615384613" y="16.706161137440759"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
