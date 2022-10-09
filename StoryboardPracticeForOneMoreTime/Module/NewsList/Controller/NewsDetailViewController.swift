@@ -13,6 +13,7 @@ class NewsDetailViewController: UIViewController {
 
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         navigationController?.isNavigationBarHidden = true
         roundTheUpperCorners()
@@ -26,8 +27,10 @@ class NewsDetailViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.tabBarController?.tabBar.isHidden = true
+        self.tabBarController?.tabBar.isHidden = false
     }
+    
+  
     
     @IBAction func onTabBack(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)

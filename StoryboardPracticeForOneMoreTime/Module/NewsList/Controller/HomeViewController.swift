@@ -20,8 +20,11 @@ class HomeViewController: UIViewController {
         self.contentCollectionView.showsVerticalScrollIndicator = false
         registerCells()
         setDataSourceAndDelegate()
+        
         // Do any additional setup after loading the view.
     }
+    
+   
     
 }
 
@@ -94,6 +97,9 @@ extension HomeViewController : UICollectionViewDataSource {
             } else {
                 guard let cell = self.contentCollectionView.dequeueReusableCell(withReuseIdentifier:RecentNewsCollectionViewCell.identifier, for: indexPath) as? RecentNewsCollectionViewCell else {
                     return UICollectionViewCell()
+                }
+                cell.onTabRecentNews = {
+                    self.onTapContent()
                 }
                 return cell
             }
@@ -172,7 +178,8 @@ extension HomeViewController : UICollectionViewDelegateFlowLayout {
     }
 }
 
-extension HomeViewController:OntapSelectorView,OnTapCell {
+extension HomeViewController:OntapSelectorView{
+    
     func onTapSelector(tabedNews: String) {
         self.dummyNewsPackage.forEach {
             if tabedNews == $0.name ?? ""
@@ -186,11 +193,15 @@ extension HomeViewController:OntapSelectorView,OnTapCell {
         debugPrint("\(tabedNews)")
     }
     
+}
+
+extension HomeViewController:OnTapCell{
     func onTapContent() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         guard let vc = storyboard.instantiateViewController(withIdentifier: "NewsDetailViewController") as? NewsDetailViewController else {
             return
         }
+//        hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }
