@@ -24,7 +24,7 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-   
+    
     
 }
 
@@ -34,7 +34,8 @@ extension HomeViewController {
     {
         self.contentCollectionView.registerCells(HeadLineContainerCollectionViewCell.identifier)
         self.contentCollectionView.registerCells(RecentNewsCollectionViewCell.identifier)
-        self.segmentCollectionView.registerCells(SelectorCollectionViewCell.identifier)
+//        self.segmentCollectionView.registerCells(SelectorCollectionViewCell.identifier)
+        self.contentCollectionView.register(SectionHeaderForNews.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: SectionHeaderForNews.identifierForReusableView)
     }
     
     private func setDataSourceAndDelegate()
@@ -109,6 +110,39 @@ extension HomeViewController : UICollectionViewDataSource {
             return cell
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        
+        if collectionView == self.contentCollectionView {
+            if indexPath.section == 1 {
+                guard let view = self.contentCollectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: SectionHeaderForNews.identifierForReusableView, for: indexPath) as? SectionHeaderForNews else {
+                    debugPrint("Doesn't conform")
+                    return UICollectionReusableView()
+                }
+                debugPrint("This is the header")
+                return view
+            } else {
+                debugPrint("No header")
+                return UICollectionReusableView()
+            }
+        } else {
+            return UICollectionReusableView()
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        if collectionView == self.contentCollectionView {
+            if section == 1 {
+                return CGSize(width: collectionView.frame.width, height: 40)
+            } else {
+                return CGSize(width: 0, height: 0)
+            }
+        } else {
+            return CGSize(width: 0, height: 0)
+        }
+    }
+    
 }
 
 extension HomeViewController : UICollectionViewDelegateFlowLayout {
@@ -171,7 +205,7 @@ extension HomeViewController : UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == self.segmentCollectionView {
-           
+            
         } else {
             debugPrint("")
         }
@@ -201,7 +235,7 @@ extension HomeViewController:OnTapCell{
         guard let vc = storyboard.instantiateViewController(withIdentifier: "NewsDetailViewController") as? NewsDetailViewController else {
             return
         }
-//        hidesBottomBarWhenPushed = true
+        //        hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

@@ -20,6 +20,17 @@ extension UICollectionViewCell {
     }
 }
 
+extension UICollectionReusableView {
+    static var identifierForReusableView:String {
+        return String(describing: self)
+    }
+    
+    public func registerView()
+    {
+        
+    }
+}
+
 extension UICollectionView {
     
     public func registerCells(_ identifier:String){
